@@ -6,6 +6,7 @@ const app = new Vue({
     emails:[],
     isLoading:true,
     loadingText:'',
+    httpError: false,
   },
 
   methods:{
@@ -27,7 +28,8 @@ const app = new Vue({
   
         })
         .catch((error) =>{
-          console.log(error);
+          this.isLoading = false;
+          this.httpError = true;
         })
       }
     }

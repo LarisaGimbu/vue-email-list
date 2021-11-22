@@ -20,6 +20,7 @@
         <li v-for="email in emails">{{email}}</li>
       </ul>
       <h5 v-else>{{loadingText}}</h5>
+      <h5 v-if="httpError">ERRORE!</h5>
     </div>
   </div>
 
