@@ -10,10 +10,16 @@
 <body>
 
   <div id="app">
-    <h1 class="text-center">These are 10 emails:</h1>
-    <ul class="text-center">
-      <li v-for="email in emails">{{email}}</li>
-    </ul>
+    <div class="container">
+      <h1>Emails</h1>
+      <button 
+        @click="getEmails"
+        type="button" 
+        class="btn btn-outline-primary text-center">Get 10 emails</button>
+      <ul>
+        <li v-for="email in emails">{{email}}</li>
+      </ul>
+    </div>
   </div>
 
 
