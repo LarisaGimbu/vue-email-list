@@ -16,9 +16,10 @@
         @click="getEmails"
         type="button" 
         class="btn btn-outline-primary text-center">Get 10 emails</button>
-      <ul>
+      <ul v-if="!isLoading">
         <li v-for="email in emails">{{email}}</li>
       </ul>
+      <h5 v-else>{{loadingText}}</h5>
     </div>
   </div>
 
